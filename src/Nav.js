@@ -1,43 +1,59 @@
 import { findByLabelText } from "@testing-library/react";
-import * as React from "react";
-import { NavLink } from "react-router-dom";
-
-function Nav() {
-  let activeStyle = {
-    textDecoration: "none",
-  };
-
-  let activeClassName = "none";
+import  React, {useState}from "react";
+import { Link } from "react-router-dom";
+import { FaTimes, FaBars} from "react-icons/fa";
+import "./NavStyles.css"
+  const Nav = () => {
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click);
+  
+    const[color, setColor] = useState(false);
+    const changecolor = () => {
+      if(window.scrollY >= 100) {
+        setColor(true);
+      } else {
+        setColor(false);
+      }
+      
+    };
+    window.addEventListener("scroll", changecolor);
 
   return (
-    <nav>
-      <ul>
+    <nav className={color? "header header-bg" : "header"}>
+      <ul className={click? "nav-menu active" : "nav-menu"}>
         <li>
-          <NavLink className="list" to="/">
+          <Link className="list" to="/">
             Home
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink className="list" to="/About">
+          <Link className="list" to="/About">
             About
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink className="list" to="/Users">
+          <Link className="list" to="/Users">
             Users
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink className="list" to="/SignIn">
+          <Link className="list" to="/SignIn">
             Sign in
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink className="list" to="/Errortest">
+          <Link className="list" to="/Errortest">
             Error Test
-          </NavLink>
+          </Link>
         </li>
       </ul>
+      <div className="hamburger" onClick={handleClick}>
+        {click ? (
+          <FaTimes size={20} style={{ color: "#fff" }} />
+        ) : (
+          <FaBars size={20} style={{ color: "#fff" }} />
+        )}
+      </div>
     </nav>
   );
 }

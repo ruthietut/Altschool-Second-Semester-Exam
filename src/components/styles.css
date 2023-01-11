@@ -57,6 +57,17 @@ input[type="submit"]:hover {
   font-size: 50px;
   margin-bottom: 20px;
 }
+button{
+  padding: 7px;
+  /* border-radius: 7px; */
+  border: 1px transparent;
+  background-color: #fff;
+}
+button:hover{
+  cursor: pointer;
+  background-color: rgb(186, 186, 228);
+  border-radius: 7px;
+}
 
 .input-container {
   display: flex;

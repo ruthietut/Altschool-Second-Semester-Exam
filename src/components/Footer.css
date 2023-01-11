@@ -1,7 +1,7 @@
 .footer{
     width: 100%;
     padding: 6rem 0;
-    background-color: black;
+    background-color: rgb(51, 49, 49);
     margin-top: 2rem;
     color: white;
     height: 300px;
@@ -49,6 +49,16 @@ p{
 }
 
 @media screen and (max-width: 640px){
+    .footer{
+      
+        width: 100%;
+        padding: 2rem 0.5rem;
+        background-color: black;
+        margin-top: 2rem;
+        color: white;
+        height: 400px;
+
+    }
     .footer-container{
         
         grid-template-columns:1fr;

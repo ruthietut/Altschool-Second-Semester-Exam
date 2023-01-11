@@ -1,8 +1,9 @@
 import React from "react";
-import "./App.css";
+import "../App.css";
 import classnames from "classnames";
 import { usePagination, DOTS } from "./usePagination";
 import "./pagination.scss";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Pagination = (props) => {
   const {
@@ -45,6 +46,10 @@ const Pagination = (props) => {
         })}
         onClick={onPrevious}>
         <div className="arrow left" />
+        <FaArrowLeft
+          size={20}
+          style={{ color: "black", marginRight: "2rem" }}
+        />
       </li>
       {paginationRange.map((pageNumber) => {
         // If the pageItem is a DOT, render the DOTS unicode character
@@ -70,6 +75,10 @@ const Pagination = (props) => {
         })}
         onClick={onNext}>
         <div className="arrow right" />
+        <FaArrowRight
+          size={20}
+          style={{ color: "black", marginRight: "2rem" }}
+        />
       </li>
     </ul>
   );

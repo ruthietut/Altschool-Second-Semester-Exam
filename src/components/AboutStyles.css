@@ -1,15 +1,4 @@
-.App{
 
-}
-.Header{
-
-}
-.AboutPage{
-
-}
-.AboutHeader{
-
-}
 .AboutPage {
     display: flex;
     flex-direction: column;

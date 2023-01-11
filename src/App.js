@@ -1,12 +1,12 @@
-import Users from "./Users";
-import About from "./About";
-import Error from "./Error";
-import Home from "./Home";
-import ErrorTest from "./ErrorTest";
+import Users from "./Routes/Users";
+import About from "./Routes/About";
+import Error from "./components/Error";
+import Home from "./Routes/Home";
+import ErrorTest from "./Routes/ErrorTest";
 
 import { Routes, Route } from "react-router-dom";
-import ErrorBoundary from "./ErrorBoundary";
-import SignIn from "./SignIn";
+import ErrorBoundary from "./components/ErrorBoundary";
+import SignIn from "./Routes/SignIn";
 
 function App() {
   return (

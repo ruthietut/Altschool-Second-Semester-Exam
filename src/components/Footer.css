@@ -5,13 +5,21 @@
     margin-top: 2rem;
     color: white;
     height: 300px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 .footer-container{
     max-width: 1140px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+ 
     gap: 40px;
+    
+
 }
 .left{
     height: 100%;
@@ -48,20 +56,32 @@ p{
     font-size: 1.2rem;
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 720px ){
+
+
+
+
     .footer{
       
         width: 100%;
         padding: 2rem 0.5rem;
-        background-color: black;
+        background-color: rgb(51, 49, 49);
         margin-top: 2rem;
         color: white;
         height: 400px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position:relative;
 
     }
     .footer-container{
-        
+        /* position:absolute; */
         grid-template-columns:1fr;
-        
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
+
+   
 }

@@ -47,7 +47,7 @@ const Pagination = (props) => {
         onClick={onPrevious}>
         <div className="arrow left" />
         <FaArrowLeft
-          size={20}
+          size={15}
           style={{ color: "black", marginRight: "2rem" }}
         />
       </li>
@@ -76,7 +76,7 @@ const Pagination = (props) => {
         onClick={onNext}>
         <div className="arrow right" />
         <FaArrowRight
-          size={20}
+          size={15}
           style={{ color: "black", marginRight: "2rem" }}
         />
       </li>

@@ -40,7 +40,7 @@ function Users() {
           
           <Nav />
         
-
+ <div className="users-content">
         {currentTableData?.map((user, i) => (
           <div key={i} className="card">
             <img src={user.picture.large} alt="Avatar" />
@@ -63,6 +63,7 @@ function Users() {
           pageSize={PageSize}
           onPageChange={(page) => setCurrentPage(page)}
         />
+        </div>
       </div>
       <Footer/>
     </>

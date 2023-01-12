@@ -45,10 +45,13 @@ const Pagination = (props) => {
           disabled: currentPage === 1,
         })}
         onClick={onPrevious}>
-        <div className="arrow left" />
+        <div className="arrow " />
         <FaArrowLeft
-          size={15}
-          style={{ color: "black", marginRight: "2rem" }}
+          size={25}
+          onMouseOver={({ target }) =>
+            (target.style.color = "rgb(96, 142, 233)")
+          }
+          onMouseOut={({ target }) => (target.style.color = "black")}
         />
       </li>
       {paginationRange.map((pageNumber) => {
@@ -74,10 +77,13 @@ const Pagination = (props) => {
           disabled: currentPage === lastPage,
         })}
         onClick={onNext}>
-        <div className="arrow right" />
+        <div className="arrow " />
         <FaArrowRight
-          size={15}
-          style={{ color: "black", marginRight: "2rem" }}
+          size={25}
+          onMouseOver={({ target }) =>
+            (target.style.color = "rgb(96, 142, 233)")
+          }
+          onMouseOut={({ target }) => (target.style.color = "black")}
         />
       </li>
     </ul>
